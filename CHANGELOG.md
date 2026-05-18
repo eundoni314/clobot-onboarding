@@ -11,6 +11,21 @@
 
 ## 2026-05-18
 
+### 클로봇 소개 페이지 전면 개편 (#4)
+- **Content** — 회사 소개 문구 추가 (PDF 자료 기준)
+- **Content** — Vision 텍스트 업데이트: "일과 삶의 공간을 로봇으로 안전하고 행복하게 만듭니다."
+- **Added** — MTP 섹션 (🚀 We innovate the world)
+- **Added** — 핵심가치 SOFT 4종 카드 (Smart / Open Mind / Fast & Flexibility / Trust)
+- **Removed** — 임시 데이터였던 "주요 현황", "회사 연혁" 섹션 삭제
+- **Changed** — MTP / Vision 박스 디자인 통일 (다크 그라데이션 + 아이콘 + 주황 포인트)
+- **Changed** — SOFT 카드 4개 균일 높이 + 세로 가운데 정렬 (`auto-rows-fr`)
+- **Changed** — 서브타이틀을 페이지 내용에 맞게 수정
+
+### 브랜드 디자인 시스템
+- **Added** — CLOBOT 브랜드 컬러 시스템 globals.css 등록 (남색 #173273, 파랑, 주황)
+- **Changed** — 보라/인디고 컬러를 브랜드 컬러로 교체 (클로봇 소개 페이지부터)
+
+### 기존
 - **Added** — 프로젝트 관리 구조 도입 (GitHub Issues, 라벨, CHANGELOG, ROADMAP)
 - **Added** — 모바일/태블릿/데스크탑 반응형 최적화
 - **Added** — 자유 이동 네비게이션 (`SectionNav` 컴포넌트)

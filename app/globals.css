@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+/* CLOBOT 브랜드 컬러 — CI 기준 */
+@theme {
+  --color-brand-navy: #173273;
+  --color-brand-navy-dark: #0F1F4A;
+  --color-brand-navy-light: #2A4A9C;
+  --color-brand-blue: #1E70B8;
+  --color-brand-blue-light: #4A9FE0;
+  --color-brand-orange: #EE5311;
+  --color-brand-orange-light: #F37544;
+}
+
 :root {
   --font-geist: 'Geist', sans-serif;
 }
@@ -9,7 +20,7 @@ body {
 }
 
 .sidebar-gradient {
-  background: linear-gradient(180deg, #1e1b4b 0%, #312e81 50%, #3730a3 100%);
+  background: linear-gradient(180deg, #0F1F4A 0%, #173273 50%, #2A4A9C 100%);
 }
 
 .step-complete {
