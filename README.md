@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CLOBOT 온보딩 사이트
 
-## Getting Started
+신규 입사자가 입사 첫날부터 빠르게 적응할 수 있도록 만든 온보딩 안내 사이트입니다.
 
-First, run the development server:
+🌐 **라이브 사이트**: https://onboarding-site-umber.vercel.app
 
-```bash
+---
+
+## 프로젝트 문서
+
+- 📋 [CONTRIBUTING.md](./CONTRIBUTING.md) — **수정/배포 방법 (초보자용 가이드)**
+- 🗺️ [ROADMAP.md](./ROADMAP.md) — 앞으로 할 일
+- 📝 [CHANGELOG.md](./CHANGELOG.md) — 지금까지 한 일
+- 🎫 [GitHub Issues](https://github.com/eundoni314/clobot-onboarding/issues) — 진행 중인 작업
+
+---
+
+## 로컬에서 실행하기
+
+```powershell
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+브라우저에서 [http://localhost:3000](http://localhost:3000) 접속.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 배포
 
-## Learn More
+`main` 브랜치에 푸시하면 [Vercel](https://vercel.com)이 자동으로 배포합니다.
+다른 브랜치에 푸시하면 Vercel이 미리보기 URL을 자동 생성합니다.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 기술 스택
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js (App Router, TypeScript)
+- Tailwind CSS v4
+- React Context (진행 상태 관리)
+- localStorage (사용자별 완료 상태 저장)
+- Vercel (호스팅 & 자동 배포)
