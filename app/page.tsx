@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const steps = [
-  { icon: "🤖", title: "클로봇 소개", desc: "비전, 미션, 사업 영역", href: "/onboarding/company" },
+  { icon: "🤖", title: "클로봇 소개", desc: "MTP, 비전, 핵심가치", href: "/onboarding/company" },
   { icon: "💼", title: "비즈니스", desc: "주요 서비스 및 고객사", href: "/onboarding/business" },
   { icon: "🌟", title: "조직문화", desc: "핵심 가치 및 복지 혜택", href: "/onboarding/culture" },
   { icon: "💻", title: "시스템 가이드", desc: "업무 필수 도구 및 링크", href: "/onboarding/systems" },
