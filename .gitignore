@@ -36,6 +36,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# 온보딩 내부 참고 원본 (이미지 추출용 소스 — 공개 배포 제외)
+/public/images/**/*.pdf
+/public/images/culture/*.png
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

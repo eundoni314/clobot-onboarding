@@ -1,14 +1,32 @@
 'use client';
 
 import { useEffect } from 'react';
+import Image from 'next/image';
 import { useProgress } from '@/app/contexts/ProgressContext';
 import SectionNav from '@/app/components/SectionNav';
 
-const divisions = [
+type DivImage = { src: string; alt: string; fit?: 'contain' | 'cover'; bg?: string; wide?: boolean };
+type Highlight = { title: string; desc: string; points?: string[] };
+type Division = {
+  no: string;
+  nameKo: string;
+  nameEn: string;
+  images: DivImage[];
+  tags: string[];
+  summary: string;
+  highlights: Highlight[];
+};
+
+const divisions: Division[] = [
   {
     no: '01',
     nameKo: '서비스로봇사업부',
     nameEn: 'Service Robot',
+    images: [
+      { src: '/images/business/service-robot.jpg', alt: '자율주행 청소로봇 (LIONSBOT)', fit: 'contain', bg: '#000' },
+      { src: '/images/business/service-charamel.jpg', alt: 'Charamel 관제 시스템 연동' },
+      { src: '/images/business/service-360.jpg', alt: '360도 자율주행 청소' },
+    ],
     tags: ['청소로봇', '안내로봇', 'Biz모델', '신규과제'],
     summary:
       '로봇 응용 소프트웨어와 자체 연동 기술을 바탕으로, 하드웨어 제약을 넘어선 자율주행 청소 환경을 설계합니다.\n현장 방문 컨설팅부터 전용 관제 시스템 ‘Charamel’을 통한 사후관리까지, 청소 자동화의 전 과정을 책임집니다.',
@@ -22,6 +40,10 @@ const divisions = [
     no: '02',
     nameKo: '필드로봇사업부',
     nameEn: 'Field Robot',
+    images: [
+      { src: '/images/business/field-robot.jpg', alt: '사족보행 산업용 로봇 SPOT' },
+      { src: '/images/business/field-tablet.jpg', alt: '태블릿으로 SPOT 작업 티칭' },
+    ],
     tags: ['SPOT', '휴머노이드', '선행기술개발'],
     summary:
       'SPOT은 복잡하고 위험한 환경에서도 안정적으로 자율 이동하며, 사람을 대신해 반복적이고 위험한 작업을 수행하는 지능형 산업 로봇입니다. 다양한 센서와 뛰어난 확장성을 바탕으로 시설 점검, 안전 관리, 데이터 수집 등 산업 현장에 최적화된 맞춤형 솔루션을 제공합니다.',
@@ -35,6 +57,10 @@ const divisions = [
     no: '03',
     nameKo: '물류로봇사업본부',
     nameEn: 'Logistics Robot',
+    images: [
+      { src: '/images/business/logistics-robot.jpg', alt: '물류 자동화 모바일 로봇 (RoAS)' },
+      { src: '/images/business/logistics-warehouse.jpg', alt: '물류 자동화 시스템 전경', fit: 'contain', bg: '#000', wide: true },
+    ],
     tags: ['AMR', '물류 자동화', 'Smart Factory', '로봇 솔루션'],
     summary:
       'AI와 로봇 기반으로 고객 환경에 맞는 물류 자동화를 컨설팅하고 시스템을 구축합니다. 로봇 분야에 특화된 솔루션과 기술 역량을 바탕으로 고객 맞춤형 로봇 개발 및 이기종 로봇관제 구축 사업을 진행합니다.',
@@ -48,12 +74,24 @@ const divisions = [
     no: '04',
     nameKo: '솔루션전략사업부',
     nameEn: 'Solution Strategy',
+    images: [
+      { src: '/images/business/solution-chameleon.jpg', alt: 'CHAMELEON 자율주행 솔루션 데모' },
+      { src: '/images/business/solution-croms.jpg', alt: 'CROMS 로봇 관제 시스템 화면' },
+    ],
     tags: ['CHAMELEON', 'CROMS', '플랫폼 솔루션 기획', 'SI'],
     summary:
       '두 가지 핵심 자체 플랫폼을 중심으로 클로봇의 로봇 솔루션 전략을 이끕니다. 자율주행 솔루션 ‘카멜레온(CHAMELEON)’과 클라우드 로봇 관제 시스템 ‘CROMS’를 통해, 어떤 환경에서도 다수의 로봇을 안전하고 효율적으로 운영할 수 있게 합니다.',
     highlights: [
-      { title: 'CHAMELEON — 자율주행 솔루션', desc: '운영 환경에 맞는 모빌리티 로봇을 손쉽게 구현하고, 다수의 로봇도 최적 경로를 생성해 안전하게 운영할 수 있는 범용 실내 자율주행 솔루션입니다.' },
-      { title: 'CROMS — 로봇 관제 시스템', desc: '제조사·운영체제와 관계없이 다수의 로봇을 통합 관리·모니터링하는 국내 유일의 클라우드 로봇 관리 시스템입니다.' },
+      {
+        title: 'CHAMELEON — 자율주행 솔루션',
+        desc: '운영 환경에 맞는 모빌리티 로봇을 손쉽게 구현하고, 다수의 로봇도 최적 경로를 생성해 안전하게 운영할 수 있는 범용 실내 자율주행 솔루션입니다.',
+        points: ['자율주행 범용화 아키텍처', '고정밀 지도작성 및 위치추정(SLAM)', '부드러운 주행 가능'],
+      },
+      {
+        title: 'CROMS — 로봇 관제 시스템',
+        desc: '제조사·운영체제와 관계없이 다수의 로봇을 통합 관리·모니터링하는 클라우드 로봇 관리 시스템입니다.',
+        points: ['다중 로봇 실시간 경로 수립 가능', '교통제어 알고리즘 개발 적용', '작업 스케줄 생성하여 작업 수행'],
+      },
       { title: '플랫폼 솔루션 기획 / SI', desc: '고객 환경에 맞춰 자체 플랫폼을 조합·통합하는 솔루션 기획과 SI를 수행합니다.' },
     ],
   },
@@ -122,10 +160,70 @@ export default function BusinessPage() {
                   <div className="flex-1 min-w-0">
                     <p className="font-semibold text-gray-800 text-xs sm:text-sm">{h.title}</p>
                     <p className="text-gray-500 text-xs sm:text-sm mt-0.5 leading-relaxed">{h.desc}</p>
+                    {'points' in h && Array.isArray(h.points) && (
+                      <ul className="mt-1.5 space-y-1">
+                        {h.points.map((p) => (
+                          <li key={p} className="flex items-center gap-2 text-gray-600 text-xs sm:text-sm">
+                            <span className="flex-shrink-0 w-1 h-1 rounded-full bg-gray-400" />
+                            {p}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
               ))}
             </div>
+
+            {/* 사업부 사진 갤러리 */}
+            {(() => {
+              const hasWide = d.images.some((img) => img.wide);
+              // 가로로 긴 사진이 있으면: 한 행에 두고 와이드 사진을 늘려 여백을 채움
+              if (hasWide) {
+                return (
+                  <div className="flex gap-2 sm:gap-3 mt-4 sm:mt-5 h-32 sm:h-40">
+                    {d.images.map((img) => (
+                      <div
+                        key={img.src}
+                        className={`relative h-full rounded-xl overflow-hidden border border-gray-100 ${img.wide ? 'flex-1' : 'flex-none aspect-[4/3]'}`}
+                        style={{ background: img.bg ?? '#f3f4f6' }}
+                      >
+                        <Image
+                          src={img.src}
+                          alt={img.alt}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 500px"
+                          className={img.fit === 'contain' ? 'object-contain' : 'object-cover'}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                );
+              }
+              const gridCls =
+                d.images.length >= 3
+                  ? 'grid-cols-2 sm:grid-cols-3'
+                  : 'grid-cols-2 sm:max-w-md sm:mx-auto';
+              return (
+                <div className={`grid gap-2 sm:gap-3 mt-4 sm:mt-5 ${gridCls}`}>
+                  {d.images.map((img) => (
+                    <div
+                      key={img.src}
+                      className="relative aspect-[4/3] rounded-xl overflow-hidden border border-gray-100"
+                      style={{ background: img.bg ?? '#f3f4f6' }}
+                    >
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        sizes="(max-width: 768px) 50vw, 250px"
+                        className={img.fit === 'contain' ? 'object-contain' : 'object-cover'}
+                      />
+                    </div>
+                  ))}
+                </div>
+              );
+            })()}
           </div>
         ))}
       </div>

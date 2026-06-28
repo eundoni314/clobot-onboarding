@@ -113,7 +113,7 @@ export default function SystemsPage() {
       <div className="mb-8 sm:mb-10">
         <span className="text-indigo-600 text-xs sm:text-sm font-semibold uppercase tracking-widest">Step 4 of 4</span>
         <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 mt-2 mb-2 sm:mb-3">💻 시스템 가이드</h1>
-        <p className="text-gray-500 text-sm sm:text-lg">업무에 필요한 모든 도구와 링크를 한 곳에 모아뒀어요.</p>
+        <p className="text-gray-500 text-sm sm:text-lg">업무 시 필요한 도구와 로그인 링크를 한눈에 확인하고 바로 접속하세요.</p>
       </div>
 
       {/* Quick tip */}

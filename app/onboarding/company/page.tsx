@@ -1,14 +1,29 @@
 'use client';
 
 import { useEffect } from 'react';
+import Image from 'next/image';
 import { useProgress } from '@/app/contexts/ProgressContext';
 import SectionNav from '@/app/components/SectionNav';
 
-const softValues = [
-  { letter: 'S', name: 'Smart', desc: '우리는 전문성을 가지며 더 큰 성장을 위해 끊임없이 고민하고 탐구합니다.' },
-  { letter: 'O', name: 'Open Mind', desc: '우리는 자유롭게 생각을 공유하고 의견을 수용하며 서로를 존중합니다.' },
-  { letter: 'F', name: 'Fast & Flexibility', desc: '우리는 변화하는 비즈니스 환경에서 유연하게 행동하며 빠르게 대처합니다.' },
-  { letter: 'T', name: 'Trust', desc: '우리는 사회, 고객, 구성원과의 관계에서 신뢰를 바탕으로 행동하며 책임을 다합니다.' },
+const ciMeanings = [
+  {
+    title: '점 (빨간색) = 로봇 | Physical Agent',
+    desc: '빨간색은 생명력·에너지·역동성을 상징합니다. 로봇이 사람처럼 사고하고 움직이는 dynamic한 존재라는 메시지입니다.',
+    accent: '#e8451f',
+    bg: 'rgba(232,69,31,0.06)',
+  },
+  {
+    title: '선 (파란색) = Cloud / AI / Data 연결망',
+    desc: '파란색은 기술·신뢰·네트워크의 보편성을 상징합니다. 클로봇의 핵심 사업인 CROMS(이기종 로봇 관제) 기반의 클라우드 데이터 플로우와 AI 인텔리전스의 흐름을 표현합니다.',
+    accent: '#2563b0',
+    bg: 'rgba(37,99,176,0.06)',
+  },
+  {
+    title: '로봇 형상 전체 = Physical AI의 완성체',
+    desc: '형상 전체는 Physical AI의 본질을 시각적으로 담아낸 심볼입니다. 점과 선이 모여 사람(로봇) 형상을 이루듯, 개별 로봇(노드)들이 AI·클라우드로 연결되어 하나의 지능체 완성을 의미합니다.',
+    accent: '#1e3a6e',
+    bg: 'rgba(30,58,110,0.06)',
+  },
 ];
 
 export default function CompanyPage() {
@@ -51,29 +66,36 @@ export default function CompanyPage() {
         </p>
       </div>
 
-      {/* 핵심가치 SOFT */}
+      {/* CI 의미 */}
       <div className="mb-6 sm:mb-8">
-        <h2 className="text-base sm:text-lg font-bold text-gray-800 mb-2 sm:mb-3">⭐ 핵심가치 (Core Values) — SOFT</h2>
-        <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-5">
-          <p className="text-gray-800 text-sm sm:text-base leading-relaxed font-medium">
-            클로봇 구성원들은 <strong className="text-brand-navy">SOFT</strong>한 핵심가치를 매일 실천합니다.
-          </p>
-          <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-            클로봇의 <strong className="text-gray-800">SOFT</strong>한 핵심가치는 자신의 업무를 할 때, 동료와 함께 협업을 할 때, 고객과의 미팅을 할 때 등 모든 곳에서 공유되며 우리의 일하는 방식의 기준이 됩니다.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 auto-rows-fr">
-          {softValues.map((v) => (
-            <div key={v.letter} className="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-100 flex gap-3 sm:gap-4 items-center">
-              <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-brand-navy to-brand-blue text-white text-2xl sm:text-3xl font-bold flex items-center justify-center shadow-sm">
-                {v.letter}
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="font-bold text-gray-800 text-sm sm:text-base">{v.name}</p>
-                <p className="text-gray-500 text-xs sm:text-sm mt-1 leading-relaxed">{v.desc}</p>
-              </div>
+        <div className="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-gray-100">
+          <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 items-center">
+            {/* 로고 */}
+            <div className="flex-shrink-0">
+              <Image
+                src="/images/company/clobot-ci.png"
+                alt="클로봇 CI 로고"
+                width={170}
+                height={140}
+                className="object-contain"
+              />
             </div>
-          ))}
+            {/* 의미 */}
+            <div className="flex-1 space-y-2.5 sm:space-y-3 w-full min-w-0">
+              {ciMeanings.map((c) => (
+                <div
+                  key={c.title}
+                  className="rounded-xl p-3 sm:p-4"
+                  style={{ background: c.bg, borderLeft: `4px solid ${c.accent}` }}
+                >
+                  <p className="font-bold text-sm sm:text-base mb-1" style={{ color: c.accent }}>
+                    {c.title}
+                  </p>
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{c.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
