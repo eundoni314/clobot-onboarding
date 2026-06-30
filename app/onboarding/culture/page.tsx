@@ -131,7 +131,7 @@ export default function CulturePage() {
         </p>
         <div className="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-100 divide-y divide-gray-100">
           {talents.map((t) => (
-            <div key={t.title} className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-4 py-2 sm:py-2.5 first:pt-0 last:pb-0">
+            <div key={t.title} className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-4 py-2 sm:py-2.5 first:pt-0 last:pb-0 sm:pl-6">
               <div className="flex-shrink-0 sm:w-52 rounded-xl border-2 border-brand-navy px-3 py-2 sm:py-3 text-center">
                 <p className="text-brand-navy font-bold text-xs sm:text-sm leading-snug whitespace-pre-line">{t.title}</p>
               </div>

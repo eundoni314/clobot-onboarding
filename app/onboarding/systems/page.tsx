@@ -97,11 +97,11 @@ export default function SystemsPage() {
       </div>
 
       {/* 안내 */}
-      <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 mb-6 sm:mb-8 flex gap-3">
+      <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 mb-6 sm:mb-8 flex gap-3">
         <span className="text-2xl flex-shrink-0">🧭</span>
         <div>
-          <p className="font-semibold text-amber-800 text-sm">아래 순서대로 진행하면 가장 수월해요</p>
-          <p className="text-amber-700 text-sm mt-1 leading-relaxed">
+          <p className="font-semibold text-emerald-800 text-sm">아래 순서대로 진행하면 가장 수월해요</p>
+          <p className="text-emerald-700 text-sm mt-1 leading-relaxed">
             구글 계정 생성부터 건물 출입까지, 신규 입사자에게 권장하는 순서대로 정리했어요.
             <br />
             ①부터 차례대로 완료해 보세요.
