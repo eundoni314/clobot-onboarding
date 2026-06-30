@@ -82,7 +82,7 @@ export default function CulturePage() {
       </div>
 
       {/* 조직도 · 배치도 안내 */}
-      <div className="mb-6 sm:mb-8">
+      <div className="mb-12 sm:mb-16">
         <h2 className="text-base sm:text-lg font-bold text-gray-800 mb-3 sm:mb-4">🗂️ 조직도 · 배치도</h2>
         <div className="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-100 flex items-start gap-3 sm:gap-4">
           <span className="text-2xl flex-shrink-0">📁</span>
@@ -98,7 +98,7 @@ export default function CulturePage() {
       </div>
 
       {/* 핵심가치 SOFT */}
-      <div className="mb-6 sm:mb-8">
+      <div className="mb-12 sm:mb-16">
         <h2 className="text-base sm:text-lg font-bold text-gray-800 mb-2 sm:mb-3">⭐ 핵심가치 (Core Values) — SOFT</h2>
         <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-5">
           <p className="text-gray-800 text-sm sm:text-base leading-relaxed font-medium">
@@ -124,7 +124,7 @@ export default function CulturePage() {
       </div>
 
       {/* 인재상 */}
-      <div className="mb-6 sm:mb-8">
+      <div className="mb-12 sm:mb-16">
         <h2 className="text-base sm:text-lg font-bold text-gray-800 mb-2 sm:mb-3">👥 인재상 — SOFT를 닮은 사람들</h2>
         <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4 sm:mb-5">
           <strong className="text-brand-navy">SOFT</strong>한 핵심가치를 바탕으로, 로봇과 함께하는 더 나은 내일을 만들어가는 클로봇의 인재상입니다.
@@ -142,7 +142,7 @@ export default function CulturePage() {
       </div>
 
       {/* '몰입'을 위한 지원 */}
-      <div className="mb-6 sm:mb-8">
+      <div className="mb-12 sm:mb-16">
         <h2 className="text-base sm:text-lg font-bold text-gray-800 mb-2 sm:mb-3">💪 ‘몰입’을 위한 지원</h2>
         <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4 sm:mb-5">
           구성원이 일에 <strong className="text-brand-navy">‘몰입’</strong>할 수 있도록, 클로봇은 다양한 제도와 복지로 일하는 환경을 함께 만들어 갑니다.
@@ -168,10 +168,10 @@ export default function CulturePage() {
       </div>
 
       {/* 클로봇 스토리 */}
-      <div className="mb-6 sm:mb-8">
+      <div className="mb-12 sm:mb-16">
         <h2 className="text-base sm:text-lg font-bold text-gray-800 mb-2 sm:mb-3">📖 클로봇 스토리</h2>
         <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4 sm:mb-5">
-          워크숍, 창립기념 행사, 사내 이벤트까지 — 클로봇이 함께 일하고 즐기며 쌓아온 이야기들을 소개합니다.
+          클로봇이 함께 일하고 즐기며 쌓아온 이야기들을 소개합니다.
         </p>
 
         {/* 월례미팅 (분기별) — 강조 */}
@@ -212,7 +212,7 @@ export default function CulturePage() {
 
         {/* 채널 링크 */}
         <div className="bg-gray-50 rounded-2xl p-4 sm:p-5 border border-gray-100">
-          <p className="text-gray-600 text-xs sm:text-sm mb-3">더 다양한 클로봇 이야기는 아래 채널에서 확인해 주세요 😊</p>
+          <p className="text-gray-600 text-xs sm:text-sm mb-3">다양한 클로봇 이야기는 아래 채널에서 확인해 주세요 😊</p>
           <div className="flex flex-wrap gap-2">
             {storyLinks.map((l) => (
               <a
