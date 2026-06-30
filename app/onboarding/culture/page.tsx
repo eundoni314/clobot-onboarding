@@ -29,11 +29,11 @@ const softValues = [
 ];
 
 const talents = [
-  { title: '자신의 일을 즐기며\n일을 주도하는 인재', desc: '클로봇 구성원들은 본인의 업무에 책임을 다하며 누구보다 열정적으로 행동합니다.' },
-  { title: '빠르게 성장하며,\n도전하는 인재', desc: '클로봇 구성원들은 끊임없이 배우며 더 큰 역량으로 빠르게 성장합니다.' },
-  { title: '다양한 역할과\n유연한 자세를 가지는 인재', desc: '클로봇 구성원들은 피드백을 적극적으로 수용하며 유연한 자세와 다양한 역할을 수행합니다.' },
-  { title: '팀으로서 함께 일하고\n우리가 하는 일에\n기쁨을 느끼는 인재', desc: '클로봇 구성원들은 혼자가 아닌 팀으로 일하며 팀과 회사의 목표를 우선합니다.' },
-  { title: '사람을 존중하고\n우선하는 인재', desc: '클로봇 구성원들은 상대방에 대한 예의와 배려를 바탕으로 서로를 존중합니다.' },
+  { title: '자신의 일을 즐기며\n일을 주도하는 인재', desc: '클로봇 구성원들은 본인의 업무에 책임을 다하며\n누구보다 열정적으로 행동합니다.' },
+  { title: '빠르게 성장하며,\n도전하는 인재', desc: '클로봇 구성원들은 끊임없이 배우며\n더 큰 역량으로 빠르게 성장합니다.' },
+  { title: '다양한 역할과\n유연한 자세를 가지는 인재', desc: '클로봇 구성원들은 피드백을 적극적으로 수용하며\n유연한 자세와 다양한 역할을 수행합니다.' },
+  { title: '팀으로서 함께 일하고\n우리가 하는 일에\n기쁨을 느끼는 인재', desc: '클로봇 구성원들은 혼자가 아닌 팀으로 일하며\n회사의 목표를 우선합니다.' },
+  { title: '사람을 존중하고\n우선하는 인재', desc: '클로봇 구성원들은 상대방에 대한 예의와 배려를 바탕으로\n서로를 존중합니다.' },
 ];
 
 const supports = [
@@ -135,7 +135,7 @@ export default function CulturePage() {
               <div className="flex-shrink-0 sm:w-52 rounded-xl border-2 border-brand-navy px-3 py-2 sm:py-3 text-center">
                 <p className="text-brand-navy font-bold text-xs sm:text-sm leading-snug whitespace-pre-line">{t.title}</p>
               </div>
-              <p className="flex-1 text-gray-600 text-xs sm:text-sm leading-relaxed">{t.desc}</p>
+              <p className="flex-1 text-gray-600 text-sm sm:text-base leading-relaxed whitespace-pre-line">{t.desc}</p>
             </div>
           ))}
         </div>
