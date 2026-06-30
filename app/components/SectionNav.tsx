@@ -25,7 +25,7 @@ export default function SectionNav({ current }: { current: string }) {
               key={s.id}
               href={s.href}
               className={`flex flex-col items-center gap-1.5 sm:gap-2 p-3 sm:p-4 rounded-xl border text-center transition-all hover:scale-105 active:scale-95 ${
-                isActive ? 'border-indigo-300 bg-indigo-50 pointer-events-none' : 'border-gray-200 bg-white hover:border-indigo-300 hover:shadow-md'
+                isActive ? 'border-brand-navy/30 bg-brand-navy/5 pointer-events-none' : 'border-gray-200 bg-white hover:border-brand-navy/30 hover:shadow-md'
               }`}
             >
               <div className="relative">
@@ -34,8 +34,8 @@ export default function SectionNav({ current }: { current: string }) {
                   <span className="absolute -top-1 -right-2 w-4 h-4 bg-emerald-500 rounded-full flex items-center justify-center text-white text-xs">✓</span>
                 )}
               </div>
-              <span className={`text-xs font-medium leading-tight ${isActive ? 'text-indigo-600' : 'text-gray-600'}`}>{s.label}</span>
-              {isActive && <span className="text-xs text-indigo-400">현재</span>}
+              <span className={`text-xs font-medium leading-tight ${isActive ? 'text-brand-navy' : 'text-gray-600'}`}>{s.label}</span>
+              {isActive && <span className="text-xs text-brand-navy/70">NOW</span>}
             </Link>
           );
         })}

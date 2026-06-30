@@ -175,7 +175,7 @@ export default function SystemsPage() {
 
       {/* HR Contact */}
       <div className="bg-gray-900 rounded-2xl p-5 sm:p-6 mb-6 sm:mb-8 text-white">
-        <h2 className="font-bold mb-4 text-sm sm:text-base">🆘 궁금한 점이 있다면?</h2>
+        <h2 className="font-bold mb-4 text-sm sm:text-base">궁금한 점이 있다면?</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
           {[
             { icon: '👩‍💼', label: '담당자', value: '인사총무팀 메이브 (장은경)' },
