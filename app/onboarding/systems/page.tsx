@@ -180,8 +180,7 @@ export default function SystemsPage() {
           {[
             { icon: '👩‍💼', label: '담당자', value: '인사총무팀 메이브 (장은경)' },
             { icon: '📧', label: '이메일', value: 'maeve@clobot.co.kr' },
-            { icon: '📞', label: '전화', value: '010.8648.8380' },
-            { icon: '🏢', label: '경영지원실', value: 'management@clobot.co.kr' },
+            { icon: '📞', label: '연락처', value: '010-8648-8380' },
           ].map((c) => (
             <div key={c.label} className="flex items-start gap-2">
               <span className="text-lg flex-shrink-0">{c.icon}</span>
