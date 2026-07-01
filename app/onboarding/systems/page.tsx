@@ -77,7 +77,6 @@ const steps: Step[] = [
     notes: [
       '각 층 마지막 퇴근자는 소등 및 냉난방 전원을 꺼주시고, 각 층 경비 설정까지 완료해주세요!',
     ],
-    links: [{ label: '마커스빌딩 안내', url: 'https://clobot.atlassian.net/wiki/spaces/ansdufdj1/pages/2038333446/_' }],
   },
 ];
 
