@@ -51,11 +51,11 @@ export default function CompanyPage() {
       </div>
 
       {/* MTP */}
-      <div className="bg-gradient-to-br from-brand-navy-dark via-brand-navy to-brand-blue rounded-2xl p-6 sm:p-8 mb-4 sm:mb-5 text-white text-center shadow-md relative overflow-hidden">
+      <div className="bg-gradient-to-br from-brand-navy-dark via-brand-navy to-brand-blue rounded-2xl p-6 sm:p-8 pb-9 sm:pb-11 mb-4 sm:mb-5 text-white text-center shadow-md relative overflow-hidden">
         <div className="absolute top-3 right-4 w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-brand-orange" />
         <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-blue-100 mb-2 sm:mb-3">🚀 MTP</p>
-        <p className="text-base sm:text-xl font-bold tracking-tight">We innovate the world</p>
-        <p className="text-[10px] sm:text-xs italic text-gray-300 mt-3 sm:mt-4">
+        <p className="text-lg sm:text-2xl font-bold tracking-tight">We innovate the world</p>
+        <p className="absolute bottom-2 right-3 sm:bottom-3 sm:right-4 text-[10px] sm:text-xs italic text-gray-300">
           *MTP : Massive Transformation Purpose (우리가 만들고자 하는 변화)
         </p>
       </div>
