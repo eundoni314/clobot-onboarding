@@ -86,7 +86,7 @@ const divisions: Division[] = [
     summary: (
       <>
         두 가지 핵심 자체 플랫폼을 중심으로 클로봇의 로봇 솔루션 전략을 이끕니다. 자율주행 솔루션 ‘<strong>카멜레온(CHAMELEON)</strong>’과
-        클라우드 로봇 관제 시스템 ‘<strong>크롬스(CROMS)</strong>’를 통해, 어떤 환경에서도 다수의 로봇을 안전하고 효율적으로 운영할 수 있게 합니다.
+        클라우드 로봇 관제 시스템 ‘<strong>크롬스(CROMS)</strong>’를 통해, 어떤 환경에서도 다수의 로봇을{'\n'}안전하고 효율적으로 운영할 수 있게 합니다.
       </>
     ),
     highlights: [
