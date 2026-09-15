@@ -56,7 +56,7 @@ export default function CompanyPage() {
         <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-blue-100 mb-2 sm:mb-3">🚀 MTP</p>
         <p className="text-lg sm:text-2xl font-bold tracking-tight">We innovate the world</p>
         <p className="absolute bottom-2 right-3 sm:bottom-3 sm:right-4 text-[10px] sm:text-xs italic text-gray-300">
-          *MTP : Massive Transformation Purpose (우리가 만들고자 하는 변화)
+          *MTP : Massive Transformative Purpose (우리가 만들고자 하는 변화)
         </p>
       </div>
 
