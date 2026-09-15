@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, type ReactNode } from 'react';
 import Image from 'next/image';
 import { useProgress } from '@/app/contexts/ProgressContext';
 import SectionNav from '@/app/components/SectionNav';
@@ -13,7 +13,7 @@ type Division = {
   nameEn: string;
   images: DivImage[];
   tags: string[];
-  summary: string;
+  summary: ReactNode;
   highlights: Highlight[];
 };
 
@@ -28,8 +28,12 @@ const divisions: Division[] = [
       { src: '/images/business/service-360.jpg', alt: '360도 자율주행 청소' },
     ],
     tags: ['청소로봇', '안내로봇', 'Biz모델', '신규과제'],
-    summary:
-      '로봇 응용 소프트웨어와 자체 연동 기술을 바탕으로, 하드웨어 제약을 넘어선 자율주행 청소 환경을 설계합니다.\n현장 방문 컨설팅부터 전용 관제 시스템 ‘Charamel’을 통한 사후관리까지, 청소 자동화의 전 과정을 책임집니다.',
+    summary: (
+      <>
+        로봇 응용 소프트웨어와 자체 연동 기술을 바탕으로, 하드웨어 제약을 넘어선 자율주행 청소 환경을 설계합니다.{'\n'}
+        현장 방문 컨설팅부터 전용 관제 시스템 ‘<strong>Charamel</strong>’을 통한 사후관리까지, 청소 자동화의 전 과정을 책임집니다.
+      </>
+    ),
     highlights: [
       { title: '자동화 기반의 청소 운영', desc: '반복 청소를 자동화해 인력 의존도를 낮추고 운영 시간을 효율화하며 관리를 간소화합니다.' },
       { title: '제조사 관계없는 연동', desc: '어떤 엘리베이터든 연동 가능하며, 광범위한 환경에서도 안정적으로 주행합니다.' },
@@ -79,8 +83,12 @@ const divisions: Division[] = [
       { src: '/images/business/solution-croms.jpg', alt: 'CROMS 로봇 관제 시스템 화면' },
     ],
     tags: ['CHAMELEON', 'CROMS', '플랫폼 솔루션 기획', 'SI'],
-    summary:
-      '두 가지 핵심 자체 플랫폼을 중심으로 클로봇의 로봇 솔루션 전략을 이끕니다. 자율주행 솔루션 ‘카멜레온(CHAMELEON)’과 클라우드 로봇 관제 시스템 ‘CROMS’를 통해, 어떤 환경에서도 다수의 로봇을 안전하고 효율적으로 운영할 수 있게 합니다.',
+    summary: (
+      <>
+        두 가지 핵심 자체 플랫폼을 중심으로 클로봇의 로봇 솔루션 전략을 이끕니다. 자율주행 솔루션 ‘<strong>카멜레온(CHAMELEON)</strong>’과
+        클라우드 로봇 관제 시스템 ‘<strong>크롬스(CROMS)</strong>’를 통해, 어떤 환경에서도 다수의 로봇을 안전하고 효율적으로 운영할 수 있게 합니다.
+      </>
+    ),
     highlights: [
       {
         title: 'CHAMELEON — 자율주행 솔루션',
